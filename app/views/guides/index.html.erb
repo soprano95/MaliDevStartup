@@ -14,6 +14,8 @@
   <tbody>
     <% @guides.each do |guide| %>
       <tr>
+        
+        <td><%= guide.title %></td>
         <td><%= guide.title %></td>
         <td><%= guide.body %></td>
         <td><%= link_to 'Show', guide %></td>
