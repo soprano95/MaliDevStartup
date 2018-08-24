@@ -1,6 +1,6 @@
-class CreateGuides < ActiveRecord::Migration[5.0]
+class CreateBlogs < ActiveRecord::Migration[5.0]
   def change
-    create_table :guides do |t|
+    create_table :blogs do |t|
       t.string :title
       t.text :body
 
