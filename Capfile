@@ -8,7 +8,8 @@ require "capistrano/deploy"
 #
 require 'capistrano/rails'
 require 'capistrano/passenger'
-
+require 'capistrano/rvm'
+require 'capistrano/bundler'
 set :rvm_type, :user
 set :rvm_ruby_version, '2.5.1'
 # require "capistrano/scm/hg"
