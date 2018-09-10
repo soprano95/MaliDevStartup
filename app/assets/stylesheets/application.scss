@@ -140,10 +140,27 @@ body {
  .card-block {
   color: black;
   text-align: left;
-  margin-top: 2rem;
-}
+  }
+
+  .para {
+  padding-top: 90%;
+  }
 
 .auth-links a {
   color: black;
   
+}
+
+.register-text{
+  text-align: rigth;
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+}
+
+.card-title {
+  color: black;
 }
