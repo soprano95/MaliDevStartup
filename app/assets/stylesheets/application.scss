@@ -35,7 +35,7 @@ body {
 }
 
 body {
-   padding-top: 2rem;
+   padding-top: 0.1rem;
   color: #fff;
   text-align: center;
 }
@@ -51,6 +51,11 @@ body {
 .masthead {
   margin-bottom: 2rem;
 }
+
+.navbar-nav > li {
+    float: none;
+    display: inline-block;
+  }
 
 .masthead-brand {
   margin-bottom: 0;

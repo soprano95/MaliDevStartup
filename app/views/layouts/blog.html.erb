@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
+     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
@@ -16,6 +18,32 @@
   <body>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
+        <div class="blog-masthead">
+          <div class="container">
+            <nav class="nav blog-nav">
+              <nav class="nav nav-masthead justify-content-center">
+                <%= link_to "Home", root_path, class: 'nav-link' %>
+                <%= link_to "About-me", about_me_path, class: 'nav-link' %>
+                <%= link_to "Conact", contact_path, class: 'nav-link' %>
+                <%= link_to "Blog", blogs_path, class: 'nav-link' %>
+                <%= link_to "Portfolio", portfolios_path, class: 'nav-link' %>
+                <%= login_helper  'nav-link' %>
+            </nav>
+          </div>
+        </div>
+
+        <div class="blog-header">
+          <div class="container">
+            <h1 class="blog-title">The bootstrap Blog</h1>
+            <p class="lead blog-description">An exemple blog template built with boostrap.</p>
+          </div>
+        </div>
+
+        <div class="container">
+          
+        </div>
+
+        <%= login_helper %>
 
         <%= yield %>
 

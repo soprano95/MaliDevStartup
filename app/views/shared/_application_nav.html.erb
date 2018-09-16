@@ -1,13 +1,30 @@
 <div class="masthead clearfix">
 	<div class="inner">
-		<h3 class="masthead-brand">Abdoul Aziz Sacko</h3>
-		<nav class="nav nav-masthead justify-content-center">
-			<%= link_to "Home", root_path, class: 'nav-link' %>
-			<%= link_to "About-me", about_me_path, class: 'nav-link' %>
-			<%= link_to "Conact", contact_path, class: 'nav-link' %>
-			<%= link_to "Blog", blogs_path, class: 'nav-link' %>
-			<%= link_to "Portfolio", portfolios_path, class: 'nav-link' %>
-			<%= login_helper  'nav-link' %>
-		</nav>
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark nav nav-masthead">
+	      <h3 class="masthead-brand navbar-brand">Abdoul Aziz Sacko</h3>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="navbar-toggler-icon"></span>
+	      </button>
+	      <div class="collapse navbar-collapse" id="navbarCollapse">
+	        <ul class="navbar-nav mr-auto">
+	          <li class="nav-item ">
+	            <%= link_to "Home", root_path, class: 'nav-link' %>
+	          </li>
+	          <li class="nav-item">
+	            <%= link_to "About-me", about_me_path, class: 'nav-link' %>
+	          </li>
+	          <li class="nav-item">
+	           <%= link_to "Conact", contact_path, class: 'nav-link' %>
+	          </li>
+	          <li class="nav-item ">
+					<%= link_to "Blog", blogs_path, class: 'nav-link' %>
+			  </li>
+			  <li class="nav-item ">
+			  <%= link_to "Portfolio", portfolios_path, class: 'nav-link' %>
+			  </li>
+			  <%= login_helper  'nav-link' %>
+	        </ul>
+	      </div>
+	    </nav>
 	</div>
 </div>
