@@ -20,15 +20,9 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-          <%= render 'shared/blog_nav' %>
-        <div class="blog-header">
-          <div class="container">
-            <h1 class="blog-title">Mon blog</h1>
-            <p class="lead blog-description">An exemple blog template built with boostrap.</p>
-            <%= link_to 'crée un nouvo blog', new_blog_path if logged_in?(:site_admin) %>
-
-          </div>
-        </div>
+          
+          <%= render 'shared/blog_masthead' %>
+        
 
         <div class="container">        
           <div class="row">
@@ -37,13 +31,9 @@
 
             <%= render 'shared/blog_sidebar' %>
         </div>
-        <footer class="blog-footer">
-          <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-          <p>
-            <a href="#">Back to top</a>
-          </p>
-        </footer>
+        
             <%= render 'shared/application_nav', location: 'bottom' %>
+            <%= render 'shared/blog_footer' %>
             <%= source_helper("blog") %>
           
       </div>
