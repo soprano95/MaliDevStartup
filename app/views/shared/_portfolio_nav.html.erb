@@ -1,0 +1,33 @@
+<header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+              <p class="text-muted">Dans ce portfolio, j'ai énuméré certains de mes projets préférés que j'ai construits au fil des ans. Ces applications capturent un large éventail d'applications que l'on aime développer, notamment: les applications Web et mobiles, les projets d'entreprise, les projets d'apprentissage automatique et les outils utilisés par des millions d'utilisateurs chaque jour.</p>
+            </div>
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Explore</h4>
+              <ul class="list-unstyled">
+                <li><%= link_to "Home", root_path, class: 'text-white' %></li>
+                <li><%= link_to "About-me", about_me_path, class: 'text-white' %></li>
+                <li><%= link_to "Conact", contact_path, class: 'text-white' %></li>
+                <li><%= link_to "Blog", blogs_path, class: 'text-white' %></li>
+                <li><%= link_to "Portfolio", portfolios_path, class: 'text-white' %></li>
+                <li><%= login_helper 'text-white' %></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <strong>Abdoul Aziz Sacko</strong>
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+</header>
