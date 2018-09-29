@@ -60,3 +60,16 @@ server '178.79.163.82', user: 'abdallah95', roles: %w{app db web}
 #     auth_methods: %w(publickey password)
 #     # password: "please use keys"
 #   }
+namespace :deploy do
+
+	desc "Je suis content"
+	task :db_seed do
+		on roles(:app) do
+			within current_path do
+				execute :rake, "db:seed RAILS_ENV=production"
+			end
+
+		end
+	end
+	
+end

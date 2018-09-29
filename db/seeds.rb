@@ -23,8 +23,7 @@ User.create!(
   name: "Regular User",
 )
 
-
-
+puts "1Regular User"
 
 
 3.times do |topic|

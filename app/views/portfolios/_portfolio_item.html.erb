@@ -6,10 +6,10 @@
       </p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <%= link_to "Edit", edit_portfolio_path(portfolio_item) if logged_in? (:site_admin) %>
-          <%= link_to "Delite", portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Etes vous sure?'} if logged_in? (:site_admin) %>
+          <%= link_to "Edit", edit_portfolio_path(portfolio_item), class: 'btn btn-primary' if logged_in? (:site_admin) %>
+          <%= link_to "Delite", portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Etes vous sure?'}, class: 'btn btn-danger' if logged_in? (:site_admin) %>
         </div>
-        <small class="text-muted">9 mins</small>
+       
       </div>
     </div>
   </div>
