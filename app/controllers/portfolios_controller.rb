@@ -30,7 +30,7 @@ class PortfoliosController < ApplicationController
    		@portfolio_item = Portfolio.new(portfolio_params)
     respond_to do |format|
       if @portfolio_item.save
-        format.html { redirect_to portfolios_path, notice: 'Portfolio Item was successfully created.' }
+        format.html { redirect_to portfolios_path, notice: 'Élément de portefeuille a été créé avec succès.' }
         #format.json { render :show, status: :created, location: @portfolio }
       else
         format.html { render :new }
@@ -46,7 +46,7 @@ class PortfoliosController < ApplicationController
    def update
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
-        format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
+        format.html { redirect_to portfolios_path, notice: 'Élement de portefeuille a été modifié avec succès.' }
         format.json { render :show, status: :ok, location: @portfolio_item }
       else
         format.html { render :edit }
@@ -61,7 +61,7 @@ class PortfoliosController < ApplicationController
    def destroy
     @portfolio_item.destroy
     respond_to do |format|
-      format.html { redirect_to portfolios_url, notice: 'Portfolio was successfully destroyed.' }
+      format.html { redirect_to portfolios_url, notice: 'Élement de portefeuille a été suprimé avec succès.' }
       format.json { head :no_content }
     end
   end
