@@ -2,6 +2,8 @@
   <div class="container">
     <h1 class="blog-title">Mon blog</h1>
     <p class="lead blog-description">Réflexions de notre parcours de développement.</p>
-    <%= link_to 'Crée un nouveau blog', new_blog_path if logged_in?(:site_admin) %>
+    <span>
+    	<%= link_to 'Crée un nouveau blog', new_blog_path if logged_in?(:site_admin) %>
+    </span>
   </div>
 </div>
