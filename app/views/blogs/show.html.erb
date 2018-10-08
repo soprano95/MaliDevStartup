@@ -1,15 +1,16 @@
 <p id="notice"><%= notice %></p>
 <div class="col-md-8 blog-main">
 	<h2> <%= @blog.title %></h2>
-	<%= link_to @blog.status, toggle_status_blog_path(@blog)  %>/
      <%= link_to 'Modifié', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
      <%= link_to 'Suprimé', @blog, method: :delete, data: { confirm: 'Étes vous sure?'}%>
 	
-    
+     <%= render 'blog_breadcrumb' %>
+
+	  <div class="blog-body">
+	    <%= markdown @blog.body %>
+	  </div>
      
-	<p>
-	   <%= @blog.body %> 
-	</p>
+	
 
 	<%= render 'comments/comment_form' %>
 
