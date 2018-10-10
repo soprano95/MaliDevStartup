@@ -4,6 +4,16 @@
             <p class="mb-0"> <em>L'enseignement est à la fois ma passion et mon meilleur allié pour la maîtrise.</em></p>
           </div>
           
+
+          <%= source_helper("alert alert-info blog-sidebar-source") %>
+
+          <div class="sidebar-module">
+            <h4>Topics</h4>
+            <% @side_bar_topics.each do |topic| %>
+              <p><%= link_to topic.title, topic_path(topic) %></p>
+            <% end %>
+          </div>
+
           <div class="p-3">
             <h4 class="font-italic">Autre part</h4>
             <ol class="list-unstyled social-links">
@@ -14,4 +24,4 @@
       <li><a href="https://twitter.com/@sacko202"><%= fa_icon "twitter" %></a></li>
             </ol>
           </div>
-        </aside><!-- /.blog-sidebar -->
+</aside><!-- /.blog-sidebar -->
