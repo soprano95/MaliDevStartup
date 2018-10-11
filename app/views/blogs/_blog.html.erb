@@ -1,17 +1,10 @@
-
-  <div class="blog-post">
+<div class="blog-post">
     <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
-    <p class="blog-post-meta">Publié  il y'a<%= distance_of_time_in_words(blog.created_at, Time.now) %> </p>
-    <% if logged_in?(:site_admin) %>
-    	 <p class="blog-post-meta">
-    	<%= link_to blog.status, toggle_status_blog_path(blog)  %>/
-    	<%= link_to 'Modifié', edit_blog_path(blog)  %>/
-    	<%= link_to 'Suprimé', blog, method: :delete, data: { confirm: 'Étes vous sure?'}%>
-    </p>
-    <% end %>
+    <p class="blog-post-meta">
+        Publié<%= distance_of_time_in_words(blog.created_at, Time.now) %>ago </p>
 
-   
+        <%= render partial: 'blogs/admin_action', locals: { blog: blog } %>
     <p>
-    	<%= blog.body%>
+      <%= blog.body%>
     </p>
-  </div><!-- /.blog-post -->
+</div><!-- /.blog-post -->

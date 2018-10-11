@@ -1,8 +1,6 @@
 <p id="notice"><%= notice %></p>
 <div class="col-md-8 blog-main">
 	<h2> <%= @blog.title %></h2>
-     <%= link_to 'Modifié', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-     <%= link_to 'Suprimé', @blog, method: :delete, data: { confirm: 'Étes vous sure?'}%>
 	
      <%= render 'blog_breadcrumb' %>
 
