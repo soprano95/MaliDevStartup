@@ -17,9 +17,7 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
+          <%= render 'shared/application_nav', location: 'bottom' %>
           
           <%= render 'shared/blog_masthead' %>
         
@@ -31,12 +29,8 @@
 
             <%= render 'shared/blog_sidebar' %>
         </div>
-        
-            <%= render 'shared/application_nav', location: 'bottom' %>
               <%= alerts %>
-            <%= render 'shared/blog_footer' %>
-            <%= source_helper("blog") %>
-          
+            <%= render 'shared/blog_footer' %>          
       </div>
   </body>
 </html>

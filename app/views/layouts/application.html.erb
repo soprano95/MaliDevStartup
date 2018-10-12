@@ -20,7 +20,14 @@
      <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= video_tag(
+    
+
+    
+   	<div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+          <%= video_tag(
               'HardDrivePhotojpeg.mp4',
               id: 'background',
               autoplay: true,
@@ -30,21 +37,14 @@
             )
             %>
 
-    
-   	<div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-
-          <%= render 'shared/application_nav' %>
-
-         
+          <%= render 'shared/application_nav' %>     
 
           <%= yield %>
 
          <%= render 'shared/application_footer' %>
      
               <%= alerts %>
-          <%= source_helper("application") %>
+         
         </div>
       </div>
     </div>
