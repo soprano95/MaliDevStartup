@@ -1,0 +1,10 @@
+<%= form_for Topic.new do |f| %>
+	
+
+	<div class="form-group">
+		<%= f.label :title %>
+		<%= f.text_field :title ,class:'form-control' %>
+	</div>
+	<br>
+	<%= f.submit "submit", class:'btn btn-primary' %>
+<% end %>

@@ -9,8 +9,11 @@
       </p>
       <div class="d-flex justify-content-between align-items-center">
         <div class="btn-group">
-          <%= link_to "Modifié", edit_portfolio_path(portfolio_item), class: 'btn btn-primary' if logged_in? (:site_admin) %>
-          <%= link_to "Suprimé", portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Etes vous sure?'}, class: 'btn btn-danger' if logged_in? (:site_admin) %>
+          <%= link_to fa_icon('pencil-square-o'), edit_portfolio_path(portfolio_item) if logged_in? (:site_admin)%>
+          <div class="btn-group">
+             <%= link_to fa_icon('trash'), portfolio_path(portfolio_item), method: :delete, data: { confirm: 'Are you sure?'} if logged_in? (:site_admin) %>
+          </div>
+         
         </div>
        
       </div>
