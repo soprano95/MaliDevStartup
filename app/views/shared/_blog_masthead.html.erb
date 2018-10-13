@@ -3,11 +3,11 @@
     <h1 class="blog-title">Mon blog</h1>
     <p class="lead blog-description">Réflexions de notre parcours de développement.</p>
     <span>
-    	<%= link_to 'Crée un nouveau blog', new_blog_path if logged_in?(:site_admin) %>
+    	<%= link_to 'Crée un nouveau blog', new_blog_path, class: 'btn btn-primary' if logged_in?(:site_admin) %>
     </span>
 
      <span>
-      <%= link_to "Topics", topics_path %>
+      <%= link_to "Topics", topics_path, class: 'btn btn-primary' %>
     </span>
     
   </div>

@@ -1,7 +1,9 @@
 <div class="col-sm-8 blog-main">
 
   <h1>Topics</h1>
-  
+  <hr>
+  <%= link_to 'New TOPIC', new_topic_path, class: 'btn btn-primary btn-block' %>
+  <hr>
   <div class='topic-index row'>
     <%= render @topics %>
   </div>
