@@ -1,42 +1,49 @@
 <div class="app-card-container">
   <div class="card">
+    <h1>À propos de moi</h1>
 
-		<h1>About Me</h1>
-		<div class="row">
-			<div class="col-md-4 col-xs-12">
-				<%= image_tag "azizpro.jpg", width: 300, alt: "profile image", class: 'profile-img'%>
-			</div>
-			<div class="col-md-8 col-xs-12">
-				<p>Cette page est en develppement</p>
+    <hr>
 
-				<p>
-				<button
-            class="btn btn-primary"
-            type="button"
-            data-toggle="collapse"
-            data-target="#jobHistory"
-            aria-expanded="false"
-            aria-controler="jobHistory"
-          >
-            Job History
-          </button>
-			</p>
+    <div class="row">
+      <div class="col-md-4">
+        <%= image_tag "azizpro.jpg", width: 300, alt: "profile image", class: 'profile-img' %>
+        <div class="skills">
+          <% @skills.each do |skill| %>
+            <div class="skill">
+              <h4><%= skill.title %></h4>
+              <div class="progress">
+                <div
+                  class="progress-bar progress-bar-striped bg-warning"
+                  role="progressbar"
+                  aria-valuenow="<%= skill.percent_utilized %>"
+                  aria-valuemax="100"
+                  style="width: <%= skill.percent_utilized %>%"
+                ></div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
 
-			<p>
-				<div class="collapse" id="jobHistory">
-					<div class="card card-block">
-						Job 1
-					</div>
-					<div class="card card-block">
-						Job 1
-					</div>
-				</div>
-			</p>
-			</div>
-			
-			
+      <div class="col-md-8">
+        <p>
+          Avec plus de 5(cinq) en développement dans un certain nombre de secteurs, j'ai réalisé que le processus de création de produit typique entre clients et développeurs était défectueux. Trop souvent, les développeurs communiquent rarement avec les clients tout au long de la phase de développement, ce qui aboutit à un produit final qui n’atteint pas l’objectif recherché par le client et l’utilisateur final.
+        </p>
 
-		</div>
-	</div>
+        <p>
+          Pour cette raison, j'ai décidé d'utiliser un modèle de développement complètement différent qui met l'accent sur une communication très ciblée et des modèles de conception transparents. Lorsque je prends un projet en main, non seulement je travaille à concevoir l'application en fonction des spécifications du client, mais je donne des mises à jour quotidiennes pour m'assurer que le projet est correctement aligné sur les objectifs du client. Le résultat final est le bon produit, livré à temps et dans les limites du budget.
+
+
+        </p>
+
+        <%= render 'about_buttons' %>
+        <%= render 'about_job_history' %>
+        <%= render 'about_education' %>
+        <%= render 'about_courses' %>
+        <%= render 'about_press' %>
+      </div>
+    </div>
+  </div>
 </div>
+
 
