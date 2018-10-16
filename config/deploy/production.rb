@@ -82,7 +82,7 @@ end
 	task :db_seed do
 		on roles(:app) do
 			within current_path do
-				execute :rake, "db:drop RAILS_ENV=production"
+				execute :rake, "db:seed RAILS_ENV=production"
 			end
 
 		end
