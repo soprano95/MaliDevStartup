@@ -61,19 +61,22 @@ server '178.79.163.82', user: 'abdallah95', roles: %w{app db web}
 #     # password: "please use keys"
 #   }
 
- desc "Init app production vide"
-  task :init_pvide do
-    on roles(:app) do
-      within current_path do
-        execute :bundle, :install
-        execute :rake, "initial:pvide RAILS_ENV=production"
-      end
-    end
-end
+ 
 
 
 
 namespace :deploy do
+
+	desc "Init app production vide"
+  task :init_pvide do
+    on roles(:app) do
+      within current_path do
+        execute :bundle, :install
+        execute :rake, "initial:init RAILS_ENV=production"
+        execute :rake, "db:seed RAILS_ENV=production"
+      end
+    end
+end
 
 	desc "Je suis content"
 	task :db_seed do

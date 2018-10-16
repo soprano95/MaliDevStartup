@@ -6,16 +6,16 @@ default: &default
 
 development:
   <<: *default
-  database: MaliDevStartup_development
+  database: malidevstartup_development
 
  
 test:
   <<: *default
-  database: MaliDevStartup_test
+  database: malidevstartup_test
 
 
 production:
   <<: *default
-  database: MaliDevStartup_production
+  database: malidevstartup_production
   username: abdallah95
   password: <%= ENV['MALIDEVSTARTUP_DATABASE_PASSWORD'] %>
